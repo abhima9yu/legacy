@@ -1,12 +1,12 @@
 Package.describe({
-  git: 'https://github.com/zimme/meteor-active-route.git',
-  name: 'zimme:active-route',
+  git: 'https://github.com/abhima9yu/meteor-active-route.git',
+  name: 'active-route',
   summary: 'Active route helpers',
-  version: '2.3.3-rc.2'
+  version: '2.3.3'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom(['1.0', '1.2']);
+  api.versionsFrom('1.6.1');
 
   api.use([
     'check',
@@ -17,8 +17,6 @@ Package.onUse(function(api) {
 
   api.use([
     'kadira:flow-router@2.0.0',
-    'meteorhacks:flow-router@1.8.0',
-    'iron:router@1.0.0',
     'templating'
   ], {weak: true});
 
@@ -41,15 +39,7 @@ Package.onTest(function(api) {
   ]);
 
   api.use([
-    'practicalmeteor:mocha@2.1.0_5',
-    'practicalmeteor:chai@2.1.0_1',
-    'zimme:active-route'
+    'active-route'
   ]);
-
-  api.addFiles([
-    'tests/client/activeroute.coffee',
-    'tests/client/helpers.coffee'
-  ], 'client');
-
-  api.addFiles('tests/server/activeroute.coffee', 'server');
 });
+
